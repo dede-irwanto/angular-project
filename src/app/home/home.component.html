@@ -1,0 +1,27 @@
+<body>
+    <h1>Halo!</h1>
+    <p>Selamat datang di situs kami.</p>
+    <span [matBadge]=objBuku.length matBadgeOverlap="false">Produk Kami</span>
+    <br>
+    <!-- <ul>
+        <li *ngFor="let buku of productBuku">
+            {{buku}}
+        </li>
+    </ul> -->
+
+    <button mat-raised-button color="primary" (click)="tambahBuku()">Tambah Buku</button>
+
+    <div *ngIf='objBuku.length > 0; else noData'>
+        <ul>
+            <li *ngFor="let buku of objBuku">
+                {{buku.id}} - {{buku.name}} - {{buku.price}}
+                <button mat-raised-button color="warn" (click)="hapusBuku()">Hapus Buku</button>
+            </li>
+        </ul>
+    </div>
+
+    <ng-template #noData>
+        <p>Tidak ada buku</p>
+    </ng-template>
+
+</body>

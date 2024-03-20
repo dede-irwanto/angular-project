@@ -1,0 +1,11 @@
+<h3>Hubungi Kami di: dedeirwanto.com</h3>
+
+<button (click)="onClick('ig')">Instagram</button>
+<button (click)="onClick('tt')">Twitter</button>
+<button (click)="onClick('yt')">Youtube</button>
+
+<div [ngSwitch] = "socialMedia">
+    <div *ngSwitchCase="'ig'">Instagram: id.dedeirwanto</div>
+    <div *ngSwitchCase="'tt'">Twitter: id_dedeirwanto</div>
+    <div *ngSwitchCase="'yt'">Youtube: id.dedeirwanto</div>
+</div>
